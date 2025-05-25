@@ -17,12 +17,17 @@ body {
 form {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 input[type='text'] {
   flex: 1;
   padding: 10px;
   font-size: 16px;
+}
+
+select {
+  padding: 10px;
 }
 
 button {
@@ -92,7 +97,6 @@ li button:hover {
   color: #2c3e50;
 }
 
-
 .priority {
   margin-left: 5px;
   font-weight: bold;
@@ -108,4 +112,11 @@ li button:hover {
 
 .priority.high {
   color: #e74c3c; /* red */
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
